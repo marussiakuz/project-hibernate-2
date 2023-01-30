@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="baseDir">logs</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="RollingFile" fileName="logs/task_hibernate.log"
+                     filePattern="logs/task_hibernate.%d{yyyy-MM-dd}.log"
+                     append="false">
+            <PatternLayout pattern="%-5p %c: %m%n" />
+            <DefaultRolloverStrategy>
+                <Delete basePath="/logs" maxDepth="2">
+                    <IfFileName glob="task_hibernate.*.log" />
+                    <IfLastModified age="P30D" />
+                </Delete>
+            </DefaultRolloverStrategy>
+            <TimeBasedTriggeringPolicy />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.javarush" level="DEBUG">
+        <AppenderRef ref="RollingFile"/>
+        </Logger>
+    </Loggers>
+</Configuration>
