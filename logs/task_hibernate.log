@@ -1,0 +1,8 @@
+INFO  com.javarush.service.CustomerService: customer id=709 and address id=718 have been successfully saved, field store id=2
+INFO  com.javarush.service.RentalService: rental that hasn't yet been returned was found: Rental(id=15714, returnDate=null, lastUpdate=2006-02-15 22:30:53.0)
+INFO  com.javarush.service.RentalService: rental has been returned: Rental(id=15714, returnDate=2023-01-30T08:22:11.592867, lastUpdate=Mon Jan 30 08:22:11 MSK 2023)
+INFO  com.javarush.service.InventoryService: available inventory id=142 in the store id=1 successfully found
+INFO  com.javarush.service.PaymentService: customer with id=709 rented inventory id=142. Rental created: Rental(id=16121, returnDate=null, lastUpdate=Mon Jan 30 08:22:11 MSK 2023), payment created: Payment(id=16121, customer=Customer(super=User(), id=709), lastUpdate=Mon Jan 30 08:22:11 MSK 2023)
+DEBUG com.javarush.service.PaymentService: now customer with id=709 has updated store id=1
+DEBUG com.javarush.dao.InventoryDao: new film text saved: FilmShort(super=FilmInfo(title=New, description=null), id=1067)
+INFO  com.javarush.service.InventoryService: new film: Film(id=1067, releaseYear=2022, language=Language(id=6, name=German, lastUpdate=Mon Jan 30 08:22:11 MSK 2023), originalLanguage=null, rentalDuration=60, rentalRate=0.99, length=900, categories=[Category(id=1, name=Action, lastUpdate=2006-02-15 05:46:27.0), Category(id=5, name=Comedy, lastUpdate=2006-02-15 05:46:27.0), Category(id=7, name=Drama, lastUpdate=2006-02-15 05:46:27.0)], replacementCost=99.0, rating=G, specialFeatures=[BEHIND_THE_SCENES, DELETED_SCENES], lastUpdate=Mon Jan 30 08:22:11 MSK 2023), inventory added: Inventory{id=4647, film id=1067, store id=2, lastUpdate=Mon Jan 30 08:22:11 MSK 2023}
